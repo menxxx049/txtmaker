@@ -36,12 +36,8 @@ async def extracter(bot, update):
         data = json.loads(f.read())
         for i in data['jsonChapterDetails']:
             for j in i['defaultResources']:
-                course_link=j['resLink']
-                if course_link.isdecimal():
-                    continue
-                if "upload" in course_link:
-                    continue
-                course_name=j['resName']
+                course_link=j['resLink\']
+                course_name=j['resName\']
                 try:
                     if "%3A%2F%2F" in course_link:
                         course_link = course_link.replace("%3A%2F%2F", "://")
